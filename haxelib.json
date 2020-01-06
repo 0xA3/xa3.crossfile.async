@@ -1,0 +1,14 @@
+{
+	"name": "xa3.crossfile.async",
+	"license": "MIT",
+	"classPath": "",
+	"url": "",
+	"tags": ["cross", "sys", "nodejs", "xa3"],
+	"description": "Asynchronous file acess for sys and nodejs with tink futures",
+	"version": "0.1.0",
+	"releasenote": "Initial release",
+	"contributors": ["0xA3"],
+	"dependencies": {
+		"tink_core": ""
+	}
+}
