@@ -11,9 +11,9 @@ class File {
 				return Future.sync( Failure( e ));
 			}
 		#elseif nodejs
-			return Future.async( callback ->
-				js.node.Fs.readFile( path, ( error, data ) -> 
-					callback( error == null 
+			return Future.irreversible( callback ->
+				js.node.Fs.readFile( path, ( error, data ) ->
+					callback( error == null
 						? Success( data.toString())
 						: Failure( Std.string( error )))));
 		#else
@@ -31,9 +31,9 @@ class File {
 				return Future.sync( Failure( e ));
 			}
 		#elseif nodejs
-			return Future.async( callback ->
-				js.node.Fs.writeFile( path, content, error -> 
-					callback( error == null 
+			return Future.irreversible( callback ->
+				js.node.Fs.writeFile( path, content, error ->
+					callback( error == null
 						? Success( path )
 						: Failure( Std.string( error )))));
 		#else

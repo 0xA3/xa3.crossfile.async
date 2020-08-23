@@ -30,7 +30,7 @@ class FileWatcher {
 	
 	public function watch( path:String ) {
 		
-		trace( 'Watching for file changes on ${path}' );
+		// trace( 'Watching for file changes on ${path}' );
 		
 		#if nodejs
 		Fs.watch( path, ( event, filename ) -> {
